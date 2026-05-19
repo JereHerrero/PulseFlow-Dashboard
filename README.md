@@ -1,23 +1,68 @@
-# PulseFlow Admin Dashboard
+# PulseFlow Dashboard
 
-A modern SaaS admin dashboard for PulseFlow built with Next.js, Tailwind CSS, and TypeScript.
+Dashboard interactivo SaaS desarrollado con Next.js, Tailwind CSS y TypeScript.
 
-## Screens
+PulseFlow Dashboard simula una plataforma moderna de operaciones, métricas e ingresos para equipos SaaS, con soporte multi idioma, autenticación mockeada y experiencia UI/UX premium.
 
-- Responsive sidebar dashboard
-- Revenue analytics and metric cards
-- Customer management table
-- Activity feed and pipeline panels
-- Dark mode toggle
-- Sign in and sign up pages
+---
 
-## Run
+## ✨ Características
 
-Install dependencies with your package manager, then start the app:
+- Dashboard SaaS interactivo
+- Soporte multi idioma (ES / EN)
+- Login mock sin backend
+- Gestión visual de clientes
+- Buscador y filtros
+- Modo oscuro
+- Diseño responsive
+- Animaciones suaves
+- Toast notifications
+- Persistencia local con localStorage
+- UI moderna inspirada en Linear y Stripe
+
+---
+
+## 🛠 Stack utilizado
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- shadcn/ui
+
+---
+
+## 🚀 Demo
+
+[[Ver demo](TU_LINK_VERCEL)](https://pulse-flow-dashboard.vercel.app/)
+
+---
+
+## ⚙ Instalación
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+---
+
+## 📌 Objetivo del proyecto
+
+Este proyecto fue creado como una demo frontend de una plataforma SaaS moderna, enfocada en mostrar:
+
+- Arquitectura frontend moderna
+- Diseño UI/UX profesional
+- Componentes reutilizables
+- Internacionalización
+- Manejo de estado
+- Experiencia interactiva tipo producto real
+
+No utiliza backend real ni base de datos, ya que el objetivo principal es portfolio y demostración frontend.
+
+---
+
+## 👨‍💻 Autor
+
+Jere Herrero
