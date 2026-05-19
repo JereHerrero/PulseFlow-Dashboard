@@ -35,7 +35,7 @@ PulseFlow Dashboard simula una plataforma moderna de operaciones, métricas e in
 
 ## 🚀 Demo
 
-[[Ver demo](TU_LINK_VERCEL)](https://pulse-flow-dashboard.vercel.app/)
+[[Ver demo](https://pulse-flow-dashboard.vercel.app/)]
 
 ---
 
