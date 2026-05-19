@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --surface: 248 250 252;
+  --panel: 255 255 255;
+  --text: 17 24 39;
+  --muted: 100 116 139;
+  --line: 226 232 240;
+}
+
+.dark {
+  color-scheme: dark;
+  --surface: 8 11 18;
+  --panel: 14 18 28;
+  --text: 241 245 249;
+  --muted: 148 163 184;
+  --line: 37 45 61;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 20% -10%, rgba(47, 109, 246, 0.16), transparent 32rem),
+    radial-gradient(circle at 85% 0%, rgba(24, 194, 156, 0.14), transparent 26rem),
+    rgb(var(--surface));
+  color: rgb(var(--text));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(47, 109, 246, 0.2);
+}
+
+.grid-paper {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.glass-panel {
+  background: rgba(var(--panel), 0.78);
+  border: 1px solid rgba(var(--line), 0.86);
+  backdrop-filter: blur(18px);
+}
+
+.focus-ring {
+  @apply outline-none ring-2 ring-transparent transition focus-visible:ring-pulse-500/60;
+}
+
+@keyframes pf-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pf-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pf-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pf-bar-grow {
+  from {
+    transform: scaleY(0.05);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.animate-fade-up {
+  animation: pf-fade-up 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-slide-in {
+  animation: pf-slide-in 440ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-scale-in {
+  animation: pf-scale-in 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-bar-grow {
+  animation: pf-bar-grow 780ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-slide-in,
+  .animate-scale-in,
+  .animate-bar-grow {
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+  }
+}
